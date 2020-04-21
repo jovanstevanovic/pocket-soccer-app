@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/main_activity_background_image"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/coatOfArmsMainImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:drawableRight="@drawable/coat_of_arms"
+        android:src="@drawable/coat_of_arms"
+        android:onClick="onClickNewGame"
+        android:paddingBottom="10dp"
+        android:drawableEnd="@drawable/coat_of_arms"/>
+
+    <TextView
+        android:id="@+id/gameTitle"
+        android:text="@string/pocket_soccer"
+        android:paddingBottom="50dp"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        app:fontFamily="@font/dancing_script"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/new_game_image"
+        android:background="@android:color/transparent"
+        android:onClick="onClickNewGame"
+        android:paddingBottom="10dp"
+        android:drawableStart="@drawable/new_game_image"
+        app:fontFamily="@font/dancing_script"
+        android:text="@string/new_game" />
+
+    <Button
+        android:id="@+id/resumeGameButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/ic_play_arrow"
+        android:background="@android:color/transparent"
+        android:paddingBottom="10dp"
+        android:onClick="onClickGameResume"
+        app:fontFamily="@font/dancing_script"
+        android:text="@string/resume_game"
+        android:drawableStart="@drawable/ic_play_arrow" />
+
+    <Button
+        android:id="@+id/showStatisticsButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/statistic_icon"
+        android:background="@android:color/transparent"
+        android:paddingBottom="10dp"
+        android:onClick="onClickShowStatistic"
+        app:fontFamily="@font/dancing_script"
+        android:text="@string/show_statistics"
+        android:drawableStart="@drawable/statistic_icon" />
+
+    <Button
+        android:id="@+id/setAppParametersButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/settings_icon"
+        android:background="@android:color/transparent"
+        android:paddingBottom="10dp"
+        app:fontFamily="@font/dancing_script"
+        android:onClick="onClickSetParameters"
+        android:text="@string/change_parameters"
+        android:drawableStart="@drawable/settings_icon" />
+
+</LinearLayout>

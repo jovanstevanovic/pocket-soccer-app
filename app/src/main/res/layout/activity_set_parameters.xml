@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/main_activity_background_image"
+    android:gravity="center"
+    tools:context=".SetParametersActivity">
+
+    <TextView
+        android:id="@+id/maxGoalsPerGame"
+        android:textColor="@android:color/background_light"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:text="@string/goals"
+        app:fontFamily="@font/dancing_script"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp">
+
+        <Button
+            android:id="@+id/oneGoalButton"
+            android:background="@android:color/transparent"
+            android:text="@string/_1"
+            android:textColor="@android:color/background_light"
+            app:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onGoalButtonClick"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/threeGoalButton"
+            android:background="@android:color/transparent"
+            android:text="@string/_3"
+            app:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onGoalButtonClick"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/sevenGoalButton"
+            android:background="@android:color/transparent"
+            android:text="@string/_7"
+            app:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onGoalButtonClick"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/maxMinutesPerGame"
+        android:textColor="@android:color/background_light"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:text="@string/minutes"
+        app:fontFamily="@font/dancing_script"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp">
+
+        <Button
+            android:id="@+id/twoMinuteButton"
+            android:background="@android:color/transparent"
+            android:text="@string/_2m"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onMinuteButtonClick"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/fiveMinuteButton"
+            android:background="@android:color/transparent"
+            android:text="@string/_5m"
+            android:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onMinuteButtonClick"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/tenMinuteButton"
+            android:background="@android:color/transparent"
+            android:text="@string/_10m"
+            android:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onMinuteButtonClick"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/speedSelect"
+        android:textColor="@android:color/background_light"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:text="@string/speed"
+        app:fontFamily="@font/dancing_script"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp">
+
+        <Button
+            android:id="@+id/twoSpeedSelect"
+            android:background="@android:color/transparent"
+            android:text="@string/x2"
+            android:textColor="@android:color/background_light"
+            android:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onSpeedSelectButtonClick"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/fiveSpeedSelect"
+            android:background="@android:color/transparent"
+            android:text="@string/x5"
+            android:fontFamily="@font/dancing_script"
+            android:textSize="32sp"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onSpeedSelectButtonClick"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/terrain"
+        android:textColor="@android:color/background_light"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:text="@string/terrain"
+        app:fontFamily="@font/dancing_script"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="225dp">
+
+        <ImageButton
+            android:id="@+id/leftNavigateButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_arrow"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onTerrainSelectButtonClick"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/terrainImageView"
+            android:layout_width="0sp"
+            android:layout_weight="2"
+            android:src="@drawable/field1_hd"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/rightNavigateButton"
+            android:background="@android:color/transparent"
+            android:src="@drawable/forward_arrow"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onTerrainSelectButtonClick"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/save_icon"
+        android:background="@android:color/transparent"
+        android:onClick="onClickBackButton"
+        android:paddingBottom="10dp"
+        app:fontFamily="@font/dancing_script"
+        android:text="@string/save"
+        android:drawableStart="@drawable/save_icon" />
+</LinearLayout>

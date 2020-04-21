@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/main_activity_background_image"
+    tools:context=".DetailViewActivity"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/firstPlayerName"
+            android:text="@string/first_player"
+            android:textSize="22sp"
+            app:fontFamily="@font/dancing_script"
+            android:textColor="@android:color/background_light"
+            android:gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/secondPlayerName"
+            android:text="@string/second_player"
+            android:textSize="22sp"
+            app:fontFamily="@font/dancing_script"
+            android:textColor="@android:color/background_light"
+            android:gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/numWinTextView"
+            android:text="@string/winner"
+            android:gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            app:fontFamily="@font/dancing_script"
+            android:textColor="@android:color/background_light"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/numLosesTextView"
+            android:text="@string/time"
+            android:gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            app:fontFamily="@font/dancing_script"
+            android:textColor="@android:color/background_light"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/playerGameRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/numWinsFP"
+                    android:text="@string/_0_wins"
+                    android:textSize="22sp"
+                    app:fontFamily="@font/dancing_script"
+                    android:textColor="@android:color/background_light"
+                    android:gravity="center"
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/numWinsSP"
+                    android:text="@string/_0_wins"
+                    android:textSize="22sp"
+                    app:fontFamily="@font/dancing_script"
+                    android:textColor="@android:color/background_light"
+                    android:gravity="center"
+                    android:layout_width="0sp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/continueButton"
+                    android:paddingTop="22dp"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="22sp"
+                    android:drawableRight="@drawable/forward_arrow"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickContinueButton"
+                    android:paddingBottom="10dp"
+                    app:fontFamily="@font/dancing_script"
+                    android:text="@string/continueFromView"
+                    android:drawableEnd="@drawable/forward_arrow"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/backButton"
+                    android:paddingTop="22dp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="22sp"
+                    android:drawableLeft="@drawable/back_arrow"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickBackButton"
+                    android:paddingBottom="10dp"
+                    app:fontFamily="@font/dancing_script"
+                    android:text="@string/back"
+                    android:drawableStart="@drawable/back_arrow"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/clearPlayersRecords"
+                    android:paddingTop="22dp"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="center"
+                    android:textSize="22sp"
+                    android:drawableLeft="@drawable/clear_all_records"
+                    android:background="@android:color/transparent"
+                    android:onClick="onClickDeleteRecordsButton"
+                    android:paddingBottom="10dp"
+                    app:fontFamily="@font/dancing_script"
+                    android:text="@string/clear"
+                    android:drawableStart="@drawable/clear_all_records" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

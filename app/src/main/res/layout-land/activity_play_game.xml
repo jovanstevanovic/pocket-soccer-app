@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/play_game_main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/play_game_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/firstPlayerNameTextView"
+            android:textColor="@android:color/background_light"
+            android:textSize="32sp"
+            android:gravity="center"
+            app:fontFamily="@font/dancing_script"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:text="@string/player_1"/>
+
+        <TextView
+            android:id="@+id/scoreTablePlayer1"
+            android:textColor="@android:color/background_light"
+            android:textSize="32sp"
+            android:gravity="center"
+            app:fontFamily="@font/dancing_script"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/_0" />
+
+        <TextView
+            android:id="@+id/scoreTablePlayer2"
+            android:textColor="@android:color/background_light"
+            android:textSize="32sp"
+            android:gravity="center"
+            app:fontFamily="@font/dancing_script"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/_0" />
+
+        <TextView
+            android:id="@+id/secondPlayerNameTextView"
+            android:textColor="@android:color/background_light"
+            android:textSize="32sp"
+            android:gravity="center"
+            app:fontFamily="@font/dancing_script"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:text="@string/player_2"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/gameTimer"
+        android:textColor="@android:color/background_light"
+        android:textSize="32sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        app:fontFamily="@font/dancing_script"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_00_00"/>
+
+    <Button
+        android:id="@+id/gameWinnerButton"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="32sp"
+        android:layout_centerInParent="true"
+        android:drawableRight="@drawable/arrow_forward"
+        android:background="@android:color/transparent"
+        android:onClick="onClickEndGameButton"
+        app:fontFamily="@font/dancing_script"
+        android:text="@string/player_x_wins"
+        android:drawableEnd="@drawable/arrow_forward"
+        android:visibility="gone"/>
+
+    <com.example.jovan.pocketsoccerapp.view.CustomImageView
+        android:id="@+id/customImageViewBall1"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <com.example.jovan.pocketsoccerapp.view.CustomImageView
+        android:id="@+id/customImageViewBall2"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <com.example.jovan.pocketsoccerapp.view.CustomImageView
+        android:id="@+id/customImageViewBall3"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <com.example.jovan.pocketsoccerapp.view.CustomImageView
+        android:id="@+id/customImageViewBall4"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <com.example.jovan.pocketsoccerapp.view.CustomImageView
+        android:id="@+id/customImageViewBall5"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <com.example.jovan.pocketsoccerapp.view.CustomImageView
+        android:id="@+id/customImageViewBall6"
+        android:layout_width="60dp"
+        android:layout_height="60dp" />
+
+    <com.example.jovan.pocketsoccerapp.view.CustomImageView
+        android:id="@+id/customImageViewBall7"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+
+    <com.example.jovan.pocketsoccerapp.view.CustomImageView
+        android:id="@+id/fieldkeeper"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fieldkeeper" />
+
+</RelativeLayout>

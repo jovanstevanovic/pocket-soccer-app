@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/main_activity_background_image"
+    android:orientation="vertical"
+    tools:context=".NewGameActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:textColor="@android:color/background_light"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:text="@string/first_player"
+            app:fontFamily="@font/dancing_script"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/firstPlayerNameEditText"
+            android:hint="@string/first_player_name"
+            app:fontFamily="@font/dancing_script"
+            android:layout_gravity="center"
+            android:textSize="32sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="15dp">
+
+        <ImageButton
+            android:id="@+id/leftNavigateButtonFP"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_arrow"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onChangeButtonClick"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/coatOfArmsImageViewFP"
+            android:layout_gravity="center"
+            android:layout_width="0sp"
+            android:layout_weight="2"
+            android:src="@drawable/t0"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/rightNavigateButtonFP"
+            android:background="@android:color/transparent"
+            android:src="@drawable/forward_arrow"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onChangeButtonClick"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/noneRobotsSelected"
+                android:checked="true"
+                android:text="@string/none"
+                android:textSize="22sp"
+                app:fontFamily="@font/dancing_script"
+                android:onClick="onRadioButtonClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_marginEnd="25dp"/>
+
+            <RadioButton
+                android:id="@+id/oneRobotSelected"
+                android:text="@string/one_robot"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                app:fontFamily="@font/dancing_script"
+                android:onClick="onRadioButtonClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_marginEnd="25dp" />
+
+            <RadioButton
+                android:id="@+id/twoRobotsSelected"
+                android:text="@string/two_robots"
+                android:textSize="22sp"
+                app:fontFamily="@font/dancing_script"
+                android:onClick="onRadioButtonClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:textColor="@android:color/background_light"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:text="@string/second_player"
+            app:fontFamily="@font/dancing_script"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"/>
+
+        <EditText
+            android:id="@+id/secondPlayerNameEditText"
+            android:hint="@string/second_player_name"
+            app:fontFamily="@font/dancing_script"
+            android:layout_gravity="center"
+            android:textSize="32sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="15dp">
+
+        <ImageButton
+            android:id="@+id/leftNavigateButtonSP"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back_arrow"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onChangeButtonClick"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/coatOfArmsImageViewSP"
+            android:layout_width="0sp"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:src="@drawable/t0"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/rightNavigateButtonSP"
+            android:background="@android:color/transparent"
+            android:src="@drawable/forward_arrow"
+            android:layout_width="0sp"
+            android:layout_weight="1"
+            android:onClick="onChangeButtonClick"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/new_game_image"
+        android:background="@android:color/transparent"
+        android:onClick="onClickKickOffButton"
+        android:paddingBottom="10dp"
+        app:fontFamily="@font/dancing_script"
+        android:text="@string/kick_off"
+        android:drawableStart="@drawable/new_game_image" />
+
+</LinearLayout>
